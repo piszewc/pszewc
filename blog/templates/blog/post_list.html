@@ -2,11 +2,11 @@
 
 {% block content %}
     {% for post in posts %}
-        <div class="post">
+        <div class="post bg-white rounded border p-5 mb-2">
             <div class="date">
                 {{ post.published_date }}
             </div>
-            <h2><a class="nounderline" href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+            <h2><a class="nounderline bd-purple bd-toc-link" href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
             <p>{{ post.text|linebreaksbr }}</p>
         </div>
     {% endfor %}

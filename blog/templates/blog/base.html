@@ -26,10 +26,10 @@
 
         </a>
         <nav class="my-2 my-md-0 mr-md-3">
-          <a class="p-2 text-dark" href="#">Features</a>
-          <a class="p-2 text-dark" href="#">Enterprise</a>
-          <a class="p-2 text-dark" href="#">Support</a>
-          <a class="p-2 text-dark" href="#">Pricing</a>
+          <a class="p-2 text-dark nounderline bd-toc-link"  href="#">Features</a>
+          <a class="p-2 text-dark nounderline" href="#">Enterprise</a>
+          <a class="p-2 text-dark nounderline" href="#">Support</a>
+          <a class="p-2 text-dark nounderline" href="#">Pricing</a>
         </nav>
       </div>
     </nav>
@@ -42,13 +42,14 @@
       {% endif %}
       <div class="content container">
         <div class="row">
-          <div class="col-8 bg-white rounded border p-5">
+          <div class="col-8">
             {% block content %}
             {% endblock %}
           </div>
 
           <div class="col-4 pl-5 pr-5">
             <p>
+              <h4 class="card-title">Recent Posts</h2>
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
               dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
               ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
@@ -56,6 +57,7 @@
               mollit anim id est laborum.
             </p>
             <p>
+              <h4 class="card-title">Categories</h2>
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
               dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
               ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
