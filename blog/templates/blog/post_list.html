@@ -4,34 +4,33 @@
 {% for post in posts %}
 <div class="row">
 
-        <div class="post bg-white p-5 col-6 ">
-                {% if post.post_image %}
-                <div><a href="{% url 'post_detail' pk=post.pk %}">
-                    <img src="{{ post.post_image.url|default_if_none:'#' }}"
-                        alt="Unboxing Amazon’s secrets – The Chronicles of a Personalization Giant" width="100%"> </a>
-                </div>
-                {% endif %}
-        
-                <div class="mt-2">{{ post.author }}</div>
-                <h2 class="blog-post-h2 mt-2"><a class="text-grey"
-                        href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
-                <p class="mt-3 text-justify">{{ post.excerpt|linebreaksbr }}</p>
-                <a href="{% url 'post_detail' pk=post.pk %}" role="button" aria-pressed="true"
-                    class="btn btn-outline-primary">Read More</a>
-            </div>
-
     <div class="post bg-white p-5 col-6 ">
-        
-        <div><a href="https://www.dynamicyield.com/blog/amazon-book/">
-            <img src="https://www.dynamicyield.com/wp-content/uploads/2019/06/DY-Amazon-Blog-795x320.jpg"
-                alt="Unboxing Amazon’s secrets – The Chronicles of a Personalization Giant" width="100%"> </a>
+        {% if post.post_image %}
+        <div><a href="{% url 'post_detail' pk=post.pk %}">
+                <img src="{{ post.post_image.url|default_if_none:'#' }}"
+                    alt="Unboxing Amazon’s secrets – The Chronicles of a Personalization Giant" width="100%"> </a>
         </div>
-        
+        {% endif %}
 
-        <div class="mt-2">{{ post.author }}</div>
+        <div class="mt-2">{{ post.author.first_name }} {{ post.author.last_name }}</div>
         <h2 class="blog-post-h2 mt-2"><a class="text-grey"
                 href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
-        <p class="mt-4 text-justify">{{ post.text|linebreaksbr }}</p>
+        <p class="mt-3 text-justify">{{ post.excerpt|linebreaksbr }}</p>
+        <a href="{% url 'post_detail' pk=post.pk %}" role="button" aria-pressed="true"
+            class="btn btn-outline-primary">Read More</a>
+    </div>
+    <div class="post bg-white p-5 col-6 ">
+        {% if post.post_image %}
+        <div><a href="{% url 'post_detail' pk=post.pk %}">
+                <img src="{{ post.post_image.url|default_if_none:'#' }}"
+                    alt="Unboxing Amazon’s secrets – The Chronicles of a Personalization Giant" width="100%"> </a>
+        </div>
+        {% endif %}
+
+        <div class="mt-2">{{ post.author.first_name }} {{ post.author.last_name }}</div>
+        <h2 class="blog-post-h2 mt-2"><a class="text-grey"
+                href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+        <p class="mt-3 text-justify">{{ post.excerpt|linebreaksbr }}</p>
         <a href="{% url 'post_detail' pk=post.pk %}" role="button" aria-pressed="true"
             class="btn btn-outline-primary">Read More</a>
     </div>
