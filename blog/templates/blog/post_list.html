@@ -1,13 +1,40 @@
 {% extends 'blog/base.html' %}
 
 {% block content %}
-    {% for post in posts %}
-        <div class="post bg-white p-5 border-bottom">
-            <div class="date">
-                {{ post.published_date }}
+{% for post in posts %}
+<div class="row">
+
+        <div class="post bg-white p-5 col-6 ">
+                {% if post.post_image %}
+                <div><a href="{% url 'post_detail' pk=post.pk %}">
+                    <img src="{{ post.post_image.url|default_if_none:'#' }}"
+                        alt="Unboxing Amazon’s secrets – The Chronicles of a Personalization Giant" width="100%"> </a>
+                </div>
+                {% endif %}
+        
+                <div class="mt-2">{{ post.author }}</div>
+                <h2 class="blog-post-h2 mt-2"><a class="text-grey"
+                        href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+                <p class="mt-4 text-justify">{{ post.excerpt|linebreaksbr }}</p>
+                <a href="{% url 'post_detail' pk=post.pk %}" role="button" aria-pressed="true"
+                    class="btn btn-outline-primary">Read More</a>
             </div>
-            <h2><a class="nounderline bd-purple bd-toc-link" href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
-            <p>{{ post.text|linebreaksbr }}</p>
+
+    <div class="post bg-white p-5 col-6 ">
+        
+        <div><a href="https://www.dynamicyield.com/blog/amazon-book/">
+            <img src="https://www.dynamicyield.com/wp-content/uploads/2019/06/DY-Amazon-Blog-795x320.jpg"
+                alt="Unboxing Amazon’s secrets – The Chronicles of a Personalization Giant" width="100%"> </a>
         </div>
-    {% endfor %}
+        
+
+        <div class="mt-2">{{ post.author }}</div>
+        <h2 class="blog-post-h2 mt-2"><a class="text-grey"
+                href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+        <p class="mt-4 text-justify">{{ post.text|linebreaksbr }}</p>
+        <a href="{% url 'post_detail' pk=post.pk %}" role="button" aria-pressed="true"
+            class="btn btn-outline-primary">Read More</a>
+    </div>
+</div>
+{% endfor %}
 {% endblock %}

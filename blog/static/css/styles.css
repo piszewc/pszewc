@@ -1,4 +1,37 @@
-a {
+
+.text-navblue {
+  color: #032147 !important;
+  text-decoration: none !important;
+  }
+  
+.text-navblue:hover, .text-navblue:focus {
   color: #5d39b9 !important;
   text-decoration: none !important;
+  }
+
+.text-grey {
+    color: #4e627e !important;
+    text-decoration: none !important;
+  }
+  
+.text-grey:hover, .text-grey:focus {
+    color: #5d39b9 !important;
+    text-decoration: none !important;
+  }
+
+body {
+  color: #4e627e !important;
+}
+
+h1, h2, h3, h4 {
+  color: #032147 !important;
+  text-decoration: none !important;
+}
+.navbar-center {
+  justify-content: center !important;
+  }
+
+.blog-post-h2 {
+  font-size: 1.25em !important;
+  font-weight: 700!important;
 }

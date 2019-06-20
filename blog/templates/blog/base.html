@@ -16,26 +16,23 @@
   <title>Piotr Szewc - Following the white rabbit.</title>
 </head>
 
-<body class="bg-light ">
-  <header>
-    <nav class="navbar bg-white border-bottom p-2 px-md-4 mb-5">
-      <div class="container d-flex flex-column flex-md-row justify-content-between">
+<body data-gr-c-s-loaded="true">
+    <div class="d-flex flex-column flex-md-row align-items-center justify-content-between p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm ">
         <a class="my-0 mr-md-auto font-weight-normal" href="#">
-          <img src="{% static 'images/logo-75x75.png' %}" width="75" height="75" class="d-inline-block align-top"
-            alt="">Piotr Szewc. Following the white rabbit.
-
+          <img src="{% static 'images/logo-75x75.png' %}" width="35" height="35"
+            alt=""></a>
             
-
-        </a>
-        <nav class="my-2 my-md-0 mr-md-3">
-          <a class="p-2 text-dark nounderline bd-toc-link"  href="#">Features</a>
-          <a class="p-2 text-dark nounderline" href="#">Enterprise</a>
-          <a class="p-2 text-dark nounderline" href="#">Support</a>
-          <a class="p-2 text-dark nounderline" href="#">Pricing</a>
+        <nav class="my-2 mr-md-auto my-md-0 mr-md-3">
+          <a class="nav-item p-2 text-navblue" href="#">About</a>
+          <a class="nav-item p-2 text-navblue" href="#">Blog</a>
+          <a class="nav-item p-2 text-navblue" href="#">Machine Learning</a>
+          <a class="nav-item p-2 text-navblue" href="#">Data Science</a>
+          <a class="nav-item p-2 text-navblue" href="#">Books</a>
+          <a class="nav-item p-2 text-navblue" href="#">Contact</a>
         </nav>
+        
       </div>
-    </nav>
-  </header>
+
 
   <div class="page-header ">
     <main role="main" class="flex-shrink-0 ">
@@ -44,28 +41,9 @@
       {% endif %}
       <div class="content container">
         <div class="row">
-          <div class="col-9">
+          <div class="col-12">
             {% block content %}
             {% endblock %}
-          </div>
-
-          <div class="col-3 pl-5 pr-5">
-            <p>
-              <h4 class="card-title">Recent Posts</h2>
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-              ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-              fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-              mollit anim id est laborum.
-            </p>
-            <p>
-              <h4 class="card-title">Categories</h2>
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-              ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-              fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-              mollit anim id est laborum."
-            </p>
           </div>
         </div>
 
