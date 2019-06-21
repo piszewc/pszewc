@@ -1,4 +1,8 @@
 
+html {
+  position: relative;
+  min-height: 100%;
+}
 .text-navblue {
   color: #032147 !important;
   text-decoration: none !important;
@@ -20,7 +24,8 @@
   }
 
 body {
-  color: #4e627e !important;
+  color: #4e627e; !important;
+  margin-bottom: 60px;
 }
 
 h1, h2, h3, h4 {
@@ -34,4 +39,20 @@ h1, h2, h3, h4 {
 .blog-post-h2 {
   font-size: 1.25em !important;
   font-weight: 700!important;
+}
+
+.excerpt {
+  font-size: 1.3em;
+  font-weight: 400;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  line-height: 60px; /* Vertically center the text there */
+  color:#fff;
+  background-color: #7a7a7a;
 }

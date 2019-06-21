@@ -23,18 +23,16 @@
             alt=""></a>
             
         <nav class="my-2 mr-md-auto my-md-0 mr-md-3">
-          <a class="nav-item p-2 text-navblue" href="#">About</a>
-          <a class="nav-item p-2 text-navblue" href="#">Blog</a>
-          <a class="nav-item p-2 text-navblue" href="#">Machine Learning</a>
-          <a class="nav-item p-2 text-navblue" href="#">Data Science</a>
-          <a class="nav-item p-2 text-navblue" href="#">Books</a>
-          <a class="nav-item p-2 text-navblue" href="#">Contact</a>
+          <a class="nav-item p-2 text-navblue font-weight-bold" href="#">About</a>
+          <a class="nav-item p-2 text-navblue font-weight-bold" href="#">Blog</a>
+          <a class="nav-item p-2 text-navblue font-weight-bold" href="#">Machine Learning</a>
+          <a class="nav-item p-2 text-navblue font-weight-bold" href="#">Data Science</a>
+          <a class="nav-item p-2 text-navblue font-weight-bold" href="#">Books</a>
+          <a class="nav-item p-2 text-navblue font-weight-bold" href="#">Contact</a>
         </nav>
         
       </div>
 
-
-  <div class="page-header ">
     <main role="main" class="flex-shrink-0 ">
       {% if user.is_authenticated %}
       <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
@@ -48,7 +46,13 @@
         </div>
 
     </main>
-  </div>
+
+  <footer class="footer">
+      <div class="container">
+        <span >Copyright © 2019 Piotr Szewc</span>
+      </div>
+    </footer>
+
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
