@@ -1,39 +1,29 @@
 {% extends 'blog/base.html' %}
 
 {% block content %}
-{% for post in posts %}
+
 <div class="row">
-
-    <div class="post bg-white p-5 col-6 ">
-        {% if post.post_image %}
-        <div><a href="{% url 'post_detail' pk=post.pk %}">
-                <img src="{{ post.post_image.url|default_if_none:'#' }}"
-                    alt="Unboxing Amazon’s secrets – The Chronicles of a Personalization Giant" width="100%"> </a>
-        </div>
-        {% endif %}
-
-        <div class="mt-2">{{ post.author.first_name }} {{ post.author.last_name }}</div>
-        <h2 class="blog-post-h2 mt-2"><a class="text-grey"
-                href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
-        <p class="mt-3 text-justify">{{ post.excerpt|linebreaksbr }}</p>
-        <a href="{% url 'post_detail' pk=post.pk %}" role="button" aria-pressed="true"
-            class="btn btn-outline-primary">Read More</a>
+        {% for post in posts %}
+        <div class="post bg-white p-4 col-6 ">
+                {% if post.post_image %}
+                <div><a href="{% url 'post_detail' pk=post.pk %}">
+                    <img src="{{ post.post_image.url|default_if_none:'#' }}"
+                        alt="Unboxing Amazon’s secrets – The Chronicles of a Personalization Giant" width="100%"> </a>
+                </div>
+                {% endif %}
+        
+                <div class="mt-2">{{ post.author.first_name }} {{ post.author.last_name }}</div>
+                <h2 class="blog-post-h2 mt-2"><a class="text-grey"
+                        href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+                <p class="mt-3 text-justify">{{ post.excerpt|linebreaksbr }}</p>
+                <a href="{% url 'post_detail' pk=post.pk %}" role="button" aria-pressed="true"
+                    class="btn btn-outline-primary">Read More</a>
+            </div>
+        {% if forloop.counter|divisibleby:2 %}
     </div>
-    <div class="post bg-white p-5 col-6 ">
-        {% if post.post_image %}
-        <div><a href="{% url 'post_detail' pk=post.pk %}">
-                <img src="{{ post.post_image.url|default_if_none:'#' }}"
-                    alt="Unboxing Amazon’s secrets – The Chronicles of a Personalization Giant" width="100%"> </a>
-        </div>
+    <div class="row ">
         {% endif %}
-
-        <div class="mt-2">{{ post.author.first_name }} {{ post.author.last_name }}</div>
-        <h2 class="blog-post-h2 mt-2"><a class="text-grey"
-                href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
-        <p class="mt-3 text-justify">{{ post.excerpt|linebreaksbr }}</p>
-        <a href="{% url 'post_detail' pk=post.pk %}" role="button" aria-pressed="true"
-            class="btn btn-outline-primary">Read More</a>
+        {% endfor %}
     </div>
-</div>
-{% endfor %}
+
 {% endblock %}
