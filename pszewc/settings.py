@@ -22,6 +22,14 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'iwa1%n(!ogpr4ktcencq^o#_(cni_d%e&fo2gl%ha3e+-g2mok'
 
+EMAIL_HOST = 'smtp.zoho.eu'
+EMAIL_HOST_USER = 'piotrszewc.pl@gmail.com'
+EMAIL_HOST_PASSWORD = 'txa7v7shFAdvaEB'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
