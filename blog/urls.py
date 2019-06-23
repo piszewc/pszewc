@@ -10,6 +10,7 @@ urlpatterns = [
     path('post/<int:pk>/edit/', views.post_edit, name='post_edit'),
 
     path('contact/', views.contact_page, name='contact_page'),
+    path('about/', views.about_page, name='about_page'),
 
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

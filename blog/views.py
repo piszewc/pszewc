@@ -17,6 +17,9 @@ def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
     return render(request, 'blog/post_detail.html', {'post': post})
 
+def about_page(request):
+    return render(request, 'blog/about_page.html', {'nbar': 'about_page'})
+
 def contact_page(request):
     if request.method == 'POST':
         message = request.POST['message']

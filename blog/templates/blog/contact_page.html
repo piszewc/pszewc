@@ -2,56 +2,74 @@
 
 {% block content %}
 <!-- Contact Us Section -->
-    <div class="container">
-        <div class="d-flex justify-content-center">
-            <!-- Section Titile -->
+<div class="row pl-3 mt-5">
+        <h2 class="font-weight-bold">Contact</h2>
+</div>
 
-            <!-- contact form -->
-            <div class="col-md-8 mt-2 wow animated fadeInRight" data-wow-delay=".2s">
+<div class="row">
+    <div class="col-6">
+        <!-- contact form -->
+        <div class="wow animated fadeInRight" data-wow-delay=".2s">
 
-                <h1>CONTACT US</h1>
-                <p>If you have a potential enquiry about data visualisation consultancy or training services or want to get in touch for any reason you can use the form below. Otherwise, you can send an email to piotrszewc.dev@gmail.com.
-
-                    </p>
-
-                <form class="shake" role="form" method="post" id="contactForm" action="{% url 'contact_page' %}" name="contact-form" data-toggle="validator">
+            
+            <p>If you have a potential enquiry about data visualisation consultancy or training services or want to get
+                in touch for any reason you can use the form below. Otherwise, you can send an email to
+                piotrszewc.dev@gmail.com.
+            </p>
+            <div class="col-md-10">
+                <form class="shake" role="form" method="post" id="contactForm" action="{% url 'contact_page' %}"
+                    name="contact-form" data-toggle="validator">
                     {% csrf_token %}
 
                     <!-- Name -->
                     <div class="form-group label-floating">
                         <label class="control-label" for="name">Name</label>
-                        <input class="form-control" id="name" type="text" name="name" required data-error="Please enter your name">
+                        <input class="form-control" id="name" type="text" name="name" required
+                            data-error="Please enter your name">
                         <div class="help-block with-errors"></div>
                     </div>
                     <!-- email -->
                     <div class="form-group label-floating">
                         <label class="control-label" for="email">Email</label>
-                        <input class="form-control" id="email" type="email" name="email" required data-error="Please enter your Email">
+                        <input class="form-control" id="email" type="email" name="email" required
+                            data-error="Please enter your Email">
                         <div class="help-block with-errors"></div>
                     </div>
                     <!-- Subject -->
                     <div class="form-group label-floating">
                         <label class="control-label">Subject</label>
-                        <input class="form-control" id="msg_subject" type="text" name="subject" required data-error="Please enter your message subject">
+                        <input class="form-control" id="msg_subject" type="text" name="subject" required
+                            data-error="Please enter your message subject">
                         <div class="help-block with-errors"></div>
                     </div>
                     <!-- Message -->
                     <div class="form-group label-floating">
                         <label for="message" class="control-label">Message</label>
-                        <textarea class="form-control" rows="3" id="message" name="message" required data-error="Write your message"></textarea>
+                        <textarea class="form-control" rows="3" id="message" name="message" required
+                            data-error="Write your message"></textarea>
                         <div class="help-block with-errors"></div>
                     </div>
                     <!-- Form Submit -->
                     <div class="form-submit mt-5">
-                        <button class="btn btn-primary" type="submit" id="form-submit"><i class="material-icons mdi mdi-message-outline"></i>
+                        <button class="btn btn-primary" type="submit" id="form-submit"><i
+                                class="material-icons mdi mdi-message-outline"></i>
                             <span>Send Message</span></button>
-                        <div id="msgSubmit" class="hidden">We will contact you shortly</div>
+                        <div id="msgSubmit" hidden >We will contact you shortly</div>
                         <div class="clearfix"></div>
                     </div>
                 </form>
             </div>
         </div>
     </div>
-</section>
+    <div class="col-6">
+            <p>Regarding Your Question</p>
+            <p>I get a lot of email, so please be patient.</p>
+            
+            <p>Nevertheless, I’m eager to help, and happy to answer any questions about the blog posts.</p>
+            
+            <p>I may even be able to give general advice on topics that I have not written about yet.</p>
+
+        </div>
+</div>
 
 {% endblock %}
