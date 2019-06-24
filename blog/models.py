@@ -3,33 +3,58 @@ from django.db import models
 from django.utils import timezone
 
 class Categories(models.Model):
-	name = models.CharField(max_length=100)
-	description = models.CharField(max_length=400, blank=True, null=True)
+  """Post Categories"""
 
-	def __str__(self):
-		return self.name
+  name = models.CharField(max_length=100)
+  description = models.CharField(max_length=400, blank=True, null=True)
+  
+  def __str__(self):
+    return self.name
 
 class Post(models.Model):
-    author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+  """Model For Posts"""
+
+  author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+  categories = models.ManyToManyField('Categories')
+  
+  title = models.CharField(max_length=100)
+  excerpt = models.CharField(max_length=300, blank=True, null=True)
+  text = models.TextField()
+  
+  post_image = models.ImageField(
+    upload_to='post_image/', blank=True, null=True)
     
-    categories = models.ManyToManyField('Categories')
-
-    title = models.CharField(max_length=100)
-    excerpt = models.CharField(max_length=300, blank=True, null=True)
-
-    text = models.TextField()
+  created_date = models.DateTimeField(default=timezone.now)
     
-    post_image = models.ImageField(
-		upload_to='post_image/', blank=True, null=True)
+  published_date = models.DateTimeField(blank=True, null=True)
+  
+  def publish(self):
+    self.published_date = timezone.now()
+    self.save()
     
-    created_date = models.DateTimeField(default=timezone.now)
-    published_date = models.DateTimeField(blank=True, null=True)
+  def __str__(self):
+    return self.title
+      
+class Author(models.Model):
+  """Model class for authors"""
+
+  first_name = models.CharField(max_length=50)
+  last_name = models.CharField(max_length=50)
+  
+  def __unicode__(self):
+    return self.first_name + " " + self.last_name
 
 
+class Book(models.Model):
+  """Model class for books"""
+  
+  title = models.CharField(max_length=200)
+  author = models.ManyToManyField('Author')
+  description = models.TextField(blank=True, null=True)
 
-    def publish(self):
-        self.published_date = timezone.now()
-        self.save()
-
-    def __str__(self):
-        return self.title
+  post_image = models.ImageField(upload_to='book_cover/', blank=True, null=True)
+  publication_date = models.DateTimeField(blank=True, null=True)
+  published_date = models.DateTimeField(default=timezone.now)
+  
+  def __unicode__(self):
+    return self.title

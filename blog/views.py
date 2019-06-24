@@ -3,7 +3,7 @@ from django.core.mail import send_mail
 from django.template.loader import render_to_string
 
 from .forms import PostForm
-from .models import Post
+from .models import Post, Book
 from django.utils import timezone
 from django.conf import settings
 
@@ -19,6 +19,11 @@ def post_detail(request, pk):
 
 def about_page(request):
     return render(request, 'blog/about_page.html', {'nbar': 'about_page'})
+
+def book_list(request):
+    books = Book.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    return render(request, 'blog/book_list.html', {'books': books})
+
 
 def contact_page(request):
     if request.method == 'POST':
