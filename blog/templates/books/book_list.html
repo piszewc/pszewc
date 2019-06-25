@@ -1,0 +1,26 @@
+{% extends 'main/base.html' %}
+{% block content %}
+
+<div class="col-12">
+    <div class="row mt-5">
+    <h2>So many books, so little time.</h2>
+    </div>
+    {% for book in books %}
+    <div class="row mt-5">
+            <div class="post bg-white p-4 col-6 ">
+                    {% if book.book_image %}
+                    <div><a >
+                        <img src="{{ book.book_image.url|default_if_none:'#' }}"
+                            alt="" width="100%"> </a>
+                    </div>
+                    {% endif %}
+            
+                    <h2 class="blog-post-h2 mt-2"><a class="text-grey"
+                            >{{ book.title }}</a></h2>
+                    <p class="mt-3 text-justify">{{ book.description|linebreaksbr }}</p>
+                </div>
+        </div>
+    {% endfor %}
+    </div>
+
+{% endblock %}

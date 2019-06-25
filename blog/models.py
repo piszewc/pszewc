@@ -41,7 +41,7 @@ class Author(models.Model):
   first_name = models.CharField(max_length=50)
   last_name = models.CharField(max_length=50)
   
-  def __unicode__(self):
+  def __str__(self):
     return self.first_name + " " + self.last_name
 
 
@@ -52,9 +52,9 @@ class Book(models.Model):
   author = models.ManyToManyField('Author')
   description = models.TextField(blank=True, null=True)
 
-  post_image = models.ImageField(upload_to='book_cover/', blank=True, null=True)
+  book_image = models.ImageField(upload_to='book_cover/', blank=True, null=True)
   publication_date = models.DateTimeField(blank=True, null=True)
   published_date = models.DateTimeField(default=timezone.now)
   
-  def __unicode__(self):
+  def __str__(self):
     return self.title

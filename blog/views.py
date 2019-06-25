@@ -18,11 +18,11 @@ def post_detail(request, pk):
     return render(request, 'blog/post_detail.html', {'post': post})
 
 def about_page(request):
-    return render(request, 'blog/about_page.html', {'nbar': 'about_page'})
+    return render(request, 'main/about_page.html', {'nbar': 'about_page'})
 
 def book_list(request):
     books = Book.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
-    return render(request, 'blog/book_list.html', {'books': books})
+    return render(request, 'books/book_list.html', {'books': books})
 
 
 def contact_page(request):
@@ -34,11 +34,11 @@ def contact_page(request):
         context = {'name': name, 'subject': subject,
                    'email': email,  'message': message}
         template = render_to_string(
-            'blog/email_template.html', context)
+            'main/email_template.html', context)
         send_mail('Contact Form', template, settings.EMAIL_HOST_USER,
                   ['pszewc@zoho.eu'], fail_silently=False)
 
-    return render(request, 'blog/contact_page.html', {'nbar': 'contact_page'})
+    return render(request, 'main/contact_page.html', {'nbar': 'contact_page'})
 
 
 def post_new(request):
