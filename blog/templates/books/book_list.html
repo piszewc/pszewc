@@ -1,10 +1,12 @@
 {% extends 'main/base.html' %}
 {% block content %}
+{% load staticfiles %}
 
-<div class="col-12">
-    <div class="row mt-5">
-    <h2>So many books, so little time.</h2>
+<div  class="mt-5">
+    <h2 class="">So many books, so little time.</h2>
     </div>
+<div class="col-12">
+    
     {% for book in books %}
     <div class="row mt-5">
             <div class="post bg-white p-4 col-6 ">
