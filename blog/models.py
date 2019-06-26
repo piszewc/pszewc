@@ -1,6 +1,7 @@
 from django.conf import settings
 from django.db import models
 from django.utils import timezone
+from django.template.defaultfilters import slugify
 
 class Categories(models.Model):
   """Post Categories"""
@@ -17,7 +18,9 @@ class Post(models.Model):
   author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
   categories = models.ManyToManyField('Categories')
   
-  title = models.CharField(max_length=100)
+  title = models.CharField(max_length=140)
+  slug = models.SlugField(max_length=140 , blank=True, null=True)
+
   excerpt = models.CharField(max_length=300, blank=True, null=True)
   text = models.TextField()
   
@@ -34,7 +37,12 @@ class Post(models.Model):
     
   def __str__(self):
     return self.title
-      
+
+def save(self, *args, **kwargs):
+  if not self.id:
+    self.slug = slugify(self.title)
+  super(Post, self).save(*args, **kwargs)
+
 class Author(models.Model):
   """Model class for authors"""
 

@@ -3,7 +3,7 @@
 {% block content %}
 <row class="d-flex justify-content-center">
     <div class="col-9">
-        <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span
+        <a class="btn btn-default" href="{% url 'post_edit' slug=post.slug pk=post.pk %}"><span
                 class="glyphicon glyphicon-pencil"></span></a>
         <div>
             {% for item in post.categories.all %}
