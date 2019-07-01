@@ -14,7 +14,8 @@
         </div>
         <h1 class='pb-3 mt-3 font-weight-bold'>{{ post.title }}</h1>
         <h2 class="pb-3 excerpt">{{ post.excerpt|linebreaksbr }}</h2>
-        <p>{{ post.text|safe }}</p>
+        <div class='blog-text'><p >{{ post.text|safe }}</p></div>
+        
     </div>
 </row>
 {% endblock %}

@@ -8,7 +8,7 @@
                 {% if post.post_image %}
                 <div><a href="{% url 'post_detail' slug=post.slug pk=post.pk %}">
                     <img src="{{ post.post_image.url|default_if_none:'#' }}"
-                        alt="Unboxing Amazon’s secrets – The Chronicles of a Personalization Giant" width="100%"> </a>
+                        alt="" width="100%"> </a>
                 </div>
                 {% endif %}
         

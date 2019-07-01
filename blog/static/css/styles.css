@@ -27,7 +27,7 @@ html {
   }
 
 .post {
-  color: #4e627e; !important;
+  color: #4e627e !important;
   margin-bottom: 10em;
 }
 
@@ -64,4 +64,13 @@ h1, h2, h3, h4 {
 .no-padding {
   padding-left: 0;
   padding-right: 0;
+}
+
+.blog-text h3 {
+  font-size: 1.2em;
+
+}
+
+.blog-text h2 {
+  font-size: 1.5em;
 }
