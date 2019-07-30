@@ -3,8 +3,7 @@
 {% block content %}
 <row class="d-flex justify-content-center">
     <div class="col-9">
-        <a class="btn btn-default" href="{% url 'post_edit' slug=post.slug pk=post.pk %}"><span
-                class="glyphicon glyphicon-pencil"></span></a>
+        
         <div>
             {% for item in post.categories.all %}
             <button type="button" class="btn btn-outline-primary btn-sm p-1 mr-1">
@@ -15,7 +14,8 @@
         <h1 class='pb-3 mt-3 font-weight-bold'>{{ post.title }}</h1>
         <h2 class="pb-3 excerpt">{{ post.excerpt|linebreaksbr }}</h2>
         <div class='blog-text'><p >{{ post.text|safe }}</p></div>
-        
+        <a class="btn btn-outline-primary" href="{% url 'post_edit' slug=post.slug pk=post.pk %}"><span
+            >edit</span></a>
     </div>
 </row>
 {% endblock %}
