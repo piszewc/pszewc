@@ -78,3 +78,8 @@ h1, h2, h3, h4 {
 main {
   margin-bottom: 5em;
 }
+
+.post_image_resize {
+  max-width:100%;
+  height: auto;
+}
