@@ -10,7 +10,8 @@ urlpatterns = [
     path('post/<slug:slug>-<int:pk>/edit/', views.post_edit, name='post_edit'),
 
     path('books/', views.book_list, name='book_list'),
-
+    
+    path('model_page/', views.model_page, name='model_page'),
     path('contact/', views.contact_page, name='contact_page'),
     path('about/', views.about_page, name='about_page'),
 

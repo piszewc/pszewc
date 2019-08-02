@@ -20,6 +20,9 @@ def post_detail(request, pk, slug):
 def about_page(request):
     return render(request, 'main/about_page.html', {'nbar': 'about_page'})
 
+def ml_model_page(request):
+    return render(request, 'other/machine_learning_model.html', {'nbar': 'model_page'})
+
 def book_list(request):
     books = Book.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
     return render(request, 'books/book_list.html', {'books': books})

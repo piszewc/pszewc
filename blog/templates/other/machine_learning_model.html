@@ -1,0 +1,35 @@
+{% extends 'main/base.html' %}
+{% load staticfiles %}
+{% block content %}
+<!-- model Section -->
+<section class=" cointainer mt-5">
+
+    <div class="row justify-content-md-center">
+        <div class="col-4">
+            <img src="{% static 'images/my_face.jpg' %}" class="rounded border border-secondary"
+                width="100%" alt=""></a></div>
+        <div class="col-8 lead justify-content-md-right">
+
+            <div class="">
+                <p>Hello, my name is Piotr Szewc</p>
+                <p>My main speciality and passion are in data, finding what is hidden. I could describe it as “Data
+                    Analytics” what means: “Data Science, Data Mining, Text Mining, Machine Learning, Statistical
+                    Learning,
+                    Statistics, Analytics Modeling, Business Analytics, Knowledge Discovery, Soft Computing, Natural
+                    Language Processing, Data Aggregation, Econometrics, Visualization & related Programming:
+                    Descriptive -,
+                    Predictive -, & Prescriptive Analytic” as short anything that need to derive something out of your
+                    data,
+                    any tool, algorithm, technique, method or programing language to achieve that.
+                </p>
+                <p>
+                    Aside from working as Analyst, I also like to enjoy hiking, playing basketball, gym, cooking for my
+                    colleagues and friends, and different types of books
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}
