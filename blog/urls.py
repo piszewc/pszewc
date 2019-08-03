@@ -11,7 +11,7 @@ urlpatterns = [
 
     path('books/', views.book_list, name='book_list'),
     
-    path('model_page/', views.model_page, name='model_page'),
+    path('model_implementation_page/', views.model_implementation_page, name='model_implementation_page'),
     path('contact/', views.contact_page, name='contact_page'),
     path('about/', views.about_page, name='about_page'),
 
