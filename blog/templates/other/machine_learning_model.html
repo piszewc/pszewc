@@ -3,81 +3,89 @@
 {% block content %}
 <!-- model Section -->
 <section class=" cointainer mt-5">
-        <div class="jumbotron">
-                <h1 class="display-4">Titanic Model Implemenation</h1>
-                <p class="lead">This is simple implementation of the titanic model.</p>
-                <hr class="my-4">
-                <p>Titanic was a British passenger liner that sank in the North Atlantic Ocean in 1912 after the ship struck an iceberg during her maiden voyage from Southampton to New York City. Of the estimated 2,224 passengers and crew aboard, more than 1,500 died, making it one of modern history's deadliest peacetime commercial marine disasters. RMS Titanic was the largest ship afloat at the time she entered service and was the second of three Olympic-class ocean liners operated by the White Star Line. She was built by the Harland and Wolff shipyard in Belfast. Thomas Andrews, chief naval architect of the shipyard at the time, died in the disaster.</p>
-              </div>
-<center>
-    <div class="col-8 lead">
-
-            
-        <p>Select your sex</p>
-        <select id="form_sex" class="form-control col-4"  >
-            <option value="0">Male</option>
-            <option value="1">Female</option>
-        </select>
-        <br>
-        <p>Select your title</p>
-        <select class="form-control col-4">
-
-            <option value="4">Master</option>
-            <option value="2">Miss</option>
-            <option value="1">Mr</option>
-            <option value="3">Mrs</option>
-            <option value="5">Rare</option>
-
-        </select>
-        <br>
-        <p>What is your age?</p>
-        <select class="form-control col-4">
-            <option value="0">0-16</option>
-            <option value="1">17-32</option>
-            <option value="2">33-48</option>
-            <option value="3">49-64</option>
-            <option value="4">64+</option>
-
-        </select>
-        <br>
-        <p>Select your Class</p>
-        <select class="form-control col-4">
-            <option value="0">First Class</option>
-            <option value="1">Second Class</option>
-            <option value="2">Third Class</option>
-        </select>
-        <br>
-        <p>Select your Fare Band</p>
-        <select class="form-control col-4">
-            <option value="0">(-0.001, 7.91]</option>
-            <option value="1">(7.91, 14.454]</option>
-            <option value="2">(14.454, 31.0]</option>
-            <option value="3">(31.0, 512.329]</option>
-
-        </select>
-        <br>
-        <p>Did you travel with siblings?</p>
-        <select class="form-control col-4">
-            <option value="0">No</option>
-            <option value="1">Yes</option>
-        </select>
-        <br>
-        <p>Embark Location</p>
-        <select class="form-control col-4">
-            <option value="0">Southampton</option>
-            <option value="1">Cherbourg</option>
-            <option value="2">Queenstown</option>
-        </select>
-
-
+    <div class="jumbotron">
+        <h1 class="display-4">Titanic Model Implemenation</h1>
+        <p class="lead">This is simple implementation of the titanic model.</p>
+        <hr class="my-4">
+        <p>Titanic was a British passenger liner that sank in the North Atlantic Ocean in 1912 after the ship struck an
+            iceberg during her maiden voyage from Southampton to New York City. Of the estimated 2,224 passengers and
+            crew aboard, more than 1,500 died, making it one of modern history's deadliest peacetime commercial marine
+            disasters. RMS Titanic was the largest ship afloat at the time she entered service and was the second of
+            three Olympic-class ocean liners operated by the White Star Line. She was built by the Harland and Wolff
+            shipyard in Belfast. Thomas Andrews, chief naval architect of the shipyard at the time, died in the
+            disaster.</p>
     </div>
-    <br>
-    <p class="lead">Check your chances to survive the titanic crash, we are going to take into consideration all your answers and plug it into TensorFlow model.  To learn more about details of how use you model on the production, check our blog post.</p>
-    <p class="lead">
-      <a href="#" class="btn btn-lg btn-secondary">Check Your Chances!</a>
-    </p>
+    <center>
+        <div class="col-8 lead">
 
-</center>
+
+            <p>Select your sex</p>
+            <select id="form_sex" class="form-control col-4">
+                <option value="0">Male</option>
+                <option value="1">Female</option>
+            </select>
+            <br>
+            <p>Select your title</p>
+            <select class="form-control col-4">
+
+                <option value="4">Master</option>
+                <option value="2">Miss</option>
+                <option value="1">Mr</option>
+                <option value="3">Mrs</option>
+                <option value="5">Rare</option>
+
+            </select>
+            <br>
+            <p>What is your age?</p>
+            <select class="form-control col-4">
+                <option value="0">0-16</option>
+                <option value="1">17-32</option>
+                <option value="2">33-48</option>
+                <option value="3">49-64</option>
+                <option value="4">64+</option>
+
+            </select>
+            <br>
+            <p>Select your Class</p>
+            <select class="form-control col-4">
+                <option value="0">First Class</option>
+                <option value="1">Second Class</option>
+                <option value="2">Third Class</option>
+            </select>
+            <br>
+            <p>Select your Fare Band</p>
+            <select class="form-control col-4">
+                <option value="0">(-0.001, 7.91]</option>
+                <option value="1">(7.91, 14.454]</option>
+                <option value="2">(14.454, 31.0]</option>
+                <option value="3">(31.0, 512.329]</option>
+
+            </select>
+            <br>
+            <p>Did you travel with siblings?</p>
+            <select class="form-control col-4">
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+            <br>
+            <p>Embark Location</p>
+            <select class="form-control col-4">
+                <option value="0">Southampton</option>
+                <option value="1">Cherbourg</option>
+                <option value="2">Queenstown</option>
+            </select>
+
+
+        </div>
+        <br>
+        <p class="lead">Check your chances to survive the titanic crash, we are going to take into consideration all
+            your answers and plug it into TensorFlow model. To learn more about details of how use you model on the
+            production, check our blog post.</p>
+        <p class="lead">
+            <a href="#" class="btn btn-lg btn-secondary">Check Your Chances!</a>
+        </p>
+
+    </center>
 </section>
 
 
