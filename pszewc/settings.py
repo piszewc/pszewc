@@ -94,7 +94,7 @@ DATABASES = {
 CACHES = {
     'default': {
         'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
-        'LOCATION': '/upload/media/models/saved_model.pkl',
+        'LOCATION': '/upload/media/models/',
         'TIMEOUT': 60,
         'OPTIONS': {
             'MAX_ENTRIES': 1000

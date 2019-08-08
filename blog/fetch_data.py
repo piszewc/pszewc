@@ -1,6 +1,6 @@
 from django.core.cache import cache
 
-model_cache_key = 'model_cache' 
+model_cache_key = 'saved_model.pkl' 
 # this key is used to `set` and `get` 
 # your trained model from the cache
 
