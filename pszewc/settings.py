@@ -89,7 +89,18 @@ DATABASES = {
     }
 }
 
-
+# cashe
+# https://docs.djangoproject.com/en/1.10/topics/cache/#local-memory-caching
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
+        'LOCATION': '/upload/media/models/saved_model.pkl',
+        'TIMEOUT': 60,
+        'OPTIONS': {
+            'MAX_ENTRIES': 1000
+        }
+    }
+}
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
 
