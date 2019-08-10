@@ -14,6 +14,6 @@ urlpatterns = [
     path('model_implementation_page/', views.model_implementation_page, name='model_implementation_page'),
     path('contact/', views.contact_page, name='contact_page'),
     path('about/', views.about_page, name='about_page'),
-
+    path('api/predict/', views.api_sentiment_pred, name='api_sentiment_pred'), 
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

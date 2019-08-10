@@ -70,3 +70,26 @@ def post_edit(request, pk, slug):
     else:
         form = PostForm(instance=post)
     return render(request, 'blog/post_edit.html', {'form': form})
+
+
+from django.shortcuts import render
+import os
+import pandas as pd
+from django.http import JsonResponse
+from sklearn.externals import joblib
+
+CURRENT_DIR = os.path.dirname(__file__)
+model_file = os.path.join(CURRENT_DIR, 'C:/Users/piotr/Documents/GitHub/VirtualBox/pszewc/upload/media/models/saved_model.pkl')
+
+model = joblib.load(model_file)
+# Create your views here.
+def api_sentiment_pred(request):
+    review = request.GET['review']
+    review_list = [review[0],review[2],review[4],review[6],review[8],review[10],review[12],review[14]]
+    user_input_df = pd.DataFrame(columns = ["Pclass","Sex","Age","Fare","Embarked","Title","IsAlone","Age*Class"])
+    user_input_df.loc[len(user_input_df), :] = review_list
+
+    model_result = model.predict(user_input_df)
+
+    result = 'Positive' if model_result == 1 else 'Negative'
+    return (JsonResponse(result, safe=False))
