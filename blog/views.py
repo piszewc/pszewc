@@ -92,4 +92,8 @@ def api_sentiment_pred(request):
     model_result = model.predict(user_input_df)
 
     result = 'Positive' if model_result == 1 else 'Negative'
+    #if result == "Positive":
+    #    return render(request,'other/machine_learning_result_ok.html')
+    #else:
+    #    return render(request,'other/machine_learning_result_bad.html')
     return (JsonResponse(result, safe=False))

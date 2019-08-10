@@ -26,7 +26,7 @@
             </select>
             <br>
             <p>Select your title</p>
-            <select class="form-control col-4">
+            <select id="form_title" class="form-control col-4">
 
                 <option value="4">Master</option>
                 <option value="2">Miss</option>
@@ -37,7 +37,7 @@
             </select>
             <br>
             <p>What is your age?</p>
-            <select class="form-control col-4">
+            <select id="form_age" class="form-control col-4">
                 <option value="0">0-16</option>
                 <option value="1">17-32</option>
                 <option value="2">33-48</option>
@@ -47,14 +47,14 @@
             </select>
             <br>
             <p>Select your Class</p>
-            <select class="form-control col-4">
+            <select id="form_class" class="form-control col-4">
                 <option value="0">First Class</option>
                 <option value="1">Second Class</option>
                 <option value="2">Third Class</option>
             </select>
             <br>
             <p>Select your Fare Band</p>
-            <select class="form-control col-4">
+            <select id="form_fband"  class="form-control col-4">
                 <option value="0">(-0.001, 7.91]</option>
                 <option value="1">(7.91, 14.454]</option>
                 <option value="2">(14.454, 31.0]</option>
@@ -63,13 +63,13 @@
             </select>
             <br>
             <p>Did you travel with siblings?</p>
-            <select class="form-control col-4">
+            <select id="form_siblings" class="form-control col-4">
                 <option value="0">No</option>
                 <option value="1">Yes</option>
             </select>
             <br>
             <p>Embark Location</p>
-            <select class="form-control col-4">
+            <select id="form_location"  class="form-control col-4">
                 <option value="0">Southampton</option>
                 <option value="1">Cherbourg</option>
                 <option value="2">Queenstown</option>
@@ -82,7 +82,7 @@
             your answers and plug it into TensorFlow model. To learn more about details of how use you model on the
             production, check our blog post.</p>
         <p class="lead">
-            <a href="#" class="btn btn-lg btn-secondary">Check Your Chances!</a>
+            <button id="check_chances" href="#" class="btn btn-lg btn-secondary">Check Your Chances!</button >
         </p>
 
     </center>
