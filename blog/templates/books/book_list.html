@@ -2,7 +2,7 @@
 {% block content %}
 {% load staticfiles %}
 
-<div class="text-center col-12 mt-5">
+<div class="text-center col-12 mt-3">
     <h2 class="font-weight-bold">So many books, so little time.</h2>
     <span class="lead">Below you can find books recommendations on programming, data science, business and psychology.</span>
 
@@ -10,8 +10,8 @@
 <div class="col-12">
 
     {% for book in books %}
-    <div class="row mt-5">
-        <div class="post bg-white p-4 col-3 ">
+    <div class="row mt-3">
+        <div class="post bg-white p-4 col-3 mt-4">
             {% if book.book_image %}
             <div><a class="float-right">
                     <img class="border rounded " src="{{ book.book_image.url|default_if_none:'#' }}" alt="" width="170px"
