@@ -1,6 +1,6 @@
 
 body {
-  color:#354d6c
+  color:#354d6c;
 }
 html {
   position: relative;
@@ -81,6 +81,8 @@ h1, h2, h3, h4 {
 
 main {
   margin-bottom: 5em;
+  font-size: 1.1250em !important;
+
 }
 
 .post_image_resize {
