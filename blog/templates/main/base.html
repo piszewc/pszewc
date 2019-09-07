@@ -18,22 +18,24 @@
 </head>
 
 <body data-gr-c-s-loaded="true">
-  <div
-    class="d-flex flex-column flex-md-row align-items-center justify-content-between bg-white border-bottom">
+  <div 
+    class="d-flex flex-column mb-2 flex-md-row align-items-center justify-content-between bg-white border-bottom" style="height: 75px" >
+    <div class="row">
+    <div class="col-12">
     <a class="my-0 mr-md-auto font-weight-normal" href="{% url 'post_list' %}">
-      <img src="{% static 'images/logo-75x75.png' %}" height="75" alt=""></a>
+      <img src="{% static 'images/logo-75x75.png' %}" height=50px  alt=""></a>
 
-    <nav class="my-2 mr-md-auto my-md-0 mr-md-3">
-      <a class="nav-item p-2 text-navblue" href="{% url 'post_list' %}">Blog</a>
-      <a class="nav-item p-2 text-navblue" href="{% url 'post_list' %}">Data Science</a>
-      <a class="nav-item p-2 text-navblue" href="{% url 'post_list' %}">Data Visualization</a>
-      <a class="nav-item p-2 text-navblue" href="{% url 'book_list' %}">Books</a>
-      <a class="nav-item p-2 text-navblue" href="{% url 'about_page' %}">About Me</a>
-      <a class="nav-item p-2 text-navblue" href="{% url 'contact_page' %}">Contact</a>
+    <nav class="my-2 mr-md-auto my-md-0 mr-md-3" >
+      <a class="nav-item p-3 text-navblue" href="{% url 'post_list' %}">Blog</a>
+      <a class="nav-item p-3 text-navblue" href="{% url 'post_list' %}">Data Science</a>
+      <a class="nav-item p-3 text-navblue" href="{% url 'post_list' %}">Data Visualization</a>
+      <a class="nav-item p-3 text-navblue" href="{% url 'book_list' %}">Books</a>
+      <a class="nav-item p-3 text-navblue" href="{% url 'about_page' %}">About Me</a>
+      <a class="nav-item p-3 text-navblue" href="{% url 'contact_page' %}">Contact</a>
     </nav>
-
-  </div>
-
+</div>
+</div>
+</div>
   <main role="main" class="flex-shrink-0">
     <div class="content container">
       <div class="row">
