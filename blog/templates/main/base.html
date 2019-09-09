@@ -19,7 +19,25 @@
 
 <body data-gr-c-s-loaded="true">
 
+  <!-- Header --->
+  <header class="container-fluid d-flex align-items-center justify-content-center border-bottom shadow-sm ">
+    
+    <div class="p-2">
+      <nav class="my-2 mr-md-auto my-md-0 mr-md-3">
+          <a class="my-0 mr-md-auto font-weight-normal pr-3" href="{% url 'post_list' %}">
+              <img src="{% static 'images/logo_new.png' %}" height="75" alt=""></a>
+        <a class="nav-item p-3 text-navblue" href="{% url 'post_list' %}">BLOG</a>
+        <a class="nav-item p-3 text-navblue" href="{% url 'post_list' %}">DATA SCIENCE</a>
+        <a class="nav-item p-3 text-navblue" href="{% url 'post_list' %}">DATA VISUALIZATION</a>
+        <a class="nav-item p-3 text-navblue" href="{% url 'book_list' %}">BOOKS</a>
+        <a class="nav-item p-3 text-navblue" href="{% url 'about_page' %}">ABOUT ME</a>
+        <a class="nav-item p-3 text-navblue btn btn-outline-primary" href="{% url 'contact_page' %}">LET’S TALK</a>
+      </nav>
+    </div>
+  </header>
+  <!-- End Header --->
 
+  <!-- Main --->
   <main role="main" class="flex-shrink-0">
     <div class="content container">
       <div class="row">
@@ -28,8 +46,8 @@
           {% endblock %}
         </div>
       </div>
-
   </main>
+  <!-- End Main --->
 
   <footer class="footer border-top">
     <div class="container">

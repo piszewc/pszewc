@@ -85,10 +85,19 @@ h1, h2, h3, h4 {
 
 main {
   margin-bottom: 5em;
-  font-size: 1.1250em !important;
+  font-size: 1.05em !important;
 }
 
 .post_image_resize {
   max-width:100%;
   height: auto;
+}
+
+.btn-outline-primary, .btn-outline-primary:visited {
+  border-color: #5d39b9 !important;
+}
+
+.btn-outline-primary:hover, .btn-outline-primary:active {
+  border-color: #5d39b9 !important;
+  background-color: #d0c2f5 !important;
 }
