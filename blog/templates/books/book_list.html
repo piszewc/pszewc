@@ -2,14 +2,13 @@
 {% block content %}
 {% load staticfiles %}
 
-<div class="text-center col-12 mt-5">
-    <h2 class="font-weight-bold">So many books, so little time.</h2>
-    <span class="lead">Below you can find books recommendations on programming, data science, business and
-        psychology.</span>
-    <br><br>
-    <hr />
-
-</div>
+<section id="landing_page" class="col-12 mt-5">
+        <h1 class="font-weight-bold text-center mb-2">So many books, so little time</h1>
+        
+    <img src="/static/images/book_page_landing.png" class="img-fluid " alt="Responsive image">
+    <span class="pl-4 lead caption" >Below you can find books recommendations on programming<br> data science, business and
+            psychology.</span>
+</section>
 
 <div class="col-12 mt-5">
     {% for book in books %}
