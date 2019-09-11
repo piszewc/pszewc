@@ -8,13 +8,13 @@ html {
   position: relative;
   min-height: 100%;
 }
-.text-navblue {
+.text-navblue:not(.btn) {
   color: #032147 !important;
   text-decoration: none !important;
   font-size: 1.05em;
   }
   
-.text-navblue:hover, .text-navblue:focus {
+.text-navblue:hover:not(.btn), .text-navblue:focus:not(.btn) {
   color: #5d39b9 !important;
   text-decoration: none !important;
   
@@ -94,28 +94,13 @@ main {
 }
 
 
-.btn-primary:hover {
-  color: #FFF !important;
-}
-.btn-primary:hover, .btn-primary:active {
-  background-color: #FFF !important;
-}
-
-.caption {
-  position: absolute;
-  top: 14%;
-  left: 0;
-  width: 100%;
-}
-
-
-.nav-top > a:hover:not(.img_remove_border) {
+.nav-top > a:hover:not(.img_remove_border):not(.btn)  {
   border-bottom: 3px solid #5d39b9 !important;
-  padding-bottom: 22px !important;
+  //padding-bottom: 26px !important;
 
 }
 
-.nav-top > a.active:not(.img_remove_border) {
+.nav-top > a.active:not(.img_remove_border):not(.btn) {
   border-bottom: 3px solid #5d39b9 !important; 
-  padding-bottom: 22px !important;
-}
+  // padding-bottom: 26px !important;
+} 
