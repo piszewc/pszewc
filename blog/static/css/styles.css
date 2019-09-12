@@ -2,6 +2,8 @@
 body {
   color:#354d6c;
   font-family: 'Roboto', sans-serif !important;
+  background-color: #fafafa !important;
+
 
 }
 html {
@@ -86,6 +88,7 @@ h1, h2, h3, h4 {
 main {
   margin-bottom: 5em;
   font-size: 1.05em !important;
+
 }
 
 .post_image_resize {
@@ -104,3 +107,4 @@ main {
   border-bottom: 3px solid #5d39b9 !important; 
   // padding-bottom: 26px !important;
 } 
+
