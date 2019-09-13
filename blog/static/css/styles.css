@@ -17,7 +17,7 @@ html {
   }
   
 .text-navblue:hover:not(.btn), .text-navblue:focus:not(.btn) {
-  color: #5d39b9 !important;
+  color: #007BFF !important;
   text-decoration: none !important;
   
   }
@@ -28,7 +28,7 @@ html {
   }
   
 .text-grey:hover, .text-grey:focus {
-    color: #5d39b9 !important;
+    color: #007BFF !important;
     text-decoration: none !important;
   }
 
@@ -98,13 +98,13 @@ main {
 
 
 .nav-top > a:hover:not(.img_remove_border):not(.btn)  {
-  border-bottom: 3px solid #5d39b9 !important;
-  //padding-bottom: 26px !important;
+  border-bottom: 3px solid #007BFF !important;
+  padding-bottom: 26px !important;
 
 }
 
 .nav-top > a.active:not(.img_remove_border):not(.btn) {
-  border-bottom: 3px solid #5d39b9 !important; 
-  // padding-bottom: 26px !important;
+  border-bottom: 3px solid #007BFF !important; 
+  padding-bottom: 26px !important;
 } 
 
