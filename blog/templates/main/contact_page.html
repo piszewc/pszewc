@@ -1,70 +1,119 @@
 {% extends 'main/base.html' %}
+{% load staticfiles %}
 
 {% block content %}
 <!-- Contact Us Section -->
-<div class="mt-5 mb-4 text-center">
-    <h1 class="font-weight-bold ">What's on your mind?</h1>
-</div>
+<main id="contact">
 
-<div class="row">
-    <div class="col-6">
-        <!-- contact form -->
-        <div class="wow animated fadeInRight" data-wow-delay=".2s">
-
-
-            <p>If you have a potential enquiry about data visualisation consultancy or training services or want to get
-                in touch for any reason you can use the form below. Otherwise, you can send an email to
-                piotrszewc.dev@gmail.com
+    <section id="contact_block" class="top-block">
+        <div class="container text-center text-justify">
+            <h1 class="bd-title mt-2 text-white">Let’s talk</h1>
+            <p>
+                    I'm a certified tableau developer and data passionate. Tell me how I help you.
             </p>
-            <div class="col-md-10">
-                <form class="shake" role="form" method="post" id="contactForm" action="{% url 'contact_page' %}"
-                    name="contact-form" data-toggle="validator">
-                    {% csrf_token %}
+            <div class="card-deck mt-3 text-center ">
+                <div class="card mb-4 box-shadow border-primary" style="background-color: #032147">
+                    <div class="card-body">
+                        <h3 class="card-title text-white">Data Visualization</h3>
+                        <img src="{% static 'images/contact_charts.png' %}" class="" alt="...">
 
-                    <!-- Name -->
-                    <div class="form-group label-floating">
-                        <label class="control-label" for="name">Name</label>
-                        <input class="form-control" id="name" type="text" name="name" required
-                            data-error="Please enter your name">
-                        <div class="help-block with-errors"></div>
+                        <ul class="list-unstyled mt-3 mb-3">
+                            <li>Visualizate your data using Tableau PowerBI or Python</li>
+                        </ul>
                     </div>
-                    <!-- email -->
-                    <div class="form-group label-floating">
-                        <label class="control-label" for="email">Email</label>
-                        <input class="form-control" id="email" type="email" name="email" required
-                            data-error="Please enter your Email">
-                        <div class="help-block with-errors"></div>
+                </div>
+                <div class="card mb-4 box-shadow border-primary" style="background-color: #032147">
+                    <div class="card-body">
+
+                        <h3 class="card-title text-white">Data Analytics</h3>
+                        <img src="{% static 'images/contact_data.png' %}" class="" alt="...">
+
+                        <ul class="list-unstyled mt-3 mb-3">
+                            <li>Data is the new gold, learn more about your business than ever before.</li>
+                        </ul>
                     </div>
-                    <!-- Subject -->
-                    <div class="form-group label-floating">
-                        <label class="control-label">Subject</label>
-                        <input class="form-control" id="msg_subject" type="text" name="subject" required
-                            data-error="Please enter your message subject">
-                        <div class="help-block with-errors"></div>
+                </div>
+                <div class="card mb-4 box-shadow border-primary" style="background-color: #032147">
+                    <div class="card-body">
+                        <h3 class="card-title text-white">Trainings</h3>
+                        <img src="{% static 'images/contact_training.png' %}" class="" alt="...">
+
+                        <ul class="list-unstyled mt-3 mb-3">
+                            <li>Individual and group trainings. </br>Drive data culture into your company.</li>
+                        </ul>
                     </div>
-                    <!-- Message -->
-                    <div class="form-group label-floating">
-                        <label for="message" class="control-label">Message</label>
-                        <textarea class="form-control" rows="3" id="message" name="message" required
-                            data-error="Write your message"></textarea>
-                        <div class="help-block with-errors"></div>
-                    </div>
-                    <!-- Form Submit -->
-                    <div class="form-submit mt-5">
-                        <button class="btn btn-primary" type="submit" id="form-submit"><i
-                                class="material-icons mdi mdi-message-outline"></i>
-                            <span>Send Message</span></button>
-                        <div id="msgSubmit" hidden>We will contact you shortly</div>
-                        <div class="clearfix"></div>
-                    </div>
-                </form>
+                </div>
+
             </div>
         </div>
-    </div>
-    <div class="col-6">
-        I usually get back to people within a business day. If you’ve got tricky questions, it might take a bit
-            longer ;)
-    </div>
-</div>
+    </section>
+
+    <section id="contact_form" class="flex-shrink-0 mt-5">
+        <div class="content container">
+            <div class="row">
+                <div class="col-6">
+                    <!-- contact form -->
+                    <div class="wow animated fadeInRight" data-wow-delay=".2s">
+                        <h2>I would love to hear from you</h2>
+
+                        <p>Question about data visualization? Help with data analytics?</br>
+                                More about a specific topic? Partnerships?</br>
+                                Just wanna say hello?</br>
+                                Perfect. Let’s chat!
+                                
+                        </br></br>You can also drop me an email to piotrszewc.dev@gmail.com
+                        </p>
+
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="col-11">
+                        <form class="shake" role="form" method="post" id="contactForm" action="{% url 'contact_page' %}"
+                            name="contact-form" data-toggle="validator">
+                            {% csrf_token %}
+
+                            <!-- Name -->
+                            <div class="form-group label-floating">
+                                <label class="control-label" for="name">Name</label>
+                                <input class="form-control" id="name" type="text" name="name" required
+                                    data-error="Please enter your name">
+                                <div class="help-block with-errors"></div>
+                            </div>
+                            <!-- email -->
+                            <div class="form-group label-floating">
+                                <label class="control-label" for="email">Email</label>
+                                <input class="form-control" id="email" type="email" name="email" required
+                                    data-error="Please enter your Email">
+                                <div class="help-block with-errors"></div>
+                            </div>
+                            <!-- Subject -->
+                            <div class="form-group label-floating">
+                                <label class="control-label">Subject</label>
+                                <input class="form-control" id="msg_subject" type="text" name="subject" required
+                                    data-error="Please enter your message subject">
+                                <div class="help-block with-errors"></div>
+                            </div>
+                            <!-- Message -->
+                            <div class="form-group label-floating">
+                                <label for="message" class="control-label">Message</label>
+                                <textarea class="form-control" rows="3" id="message" name="message" required
+                                    data-error="Write your message"></textarea>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                            <!-- Form Submit -->
+                            <div class="form-submit mt-4 mb-5">
+                                <button class="btn btn-primary" type="submit" id="form-submit"><i
+                                        class="material-icons mdi mdi-message-outline"></i>
+                                    <span>Send Message</span></button>
+                                <div id="msgSubmit" hidden>We will contact you shortly</div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
 
 {% endblock %}
