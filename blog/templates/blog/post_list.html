@@ -1,8 +1,12 @@
 {% extends 'main/base.html' %}
 
 {% block content %}
+<main id="posts">
+
+        <section id="posts_lead" style="padding-top: 5vh">
+            <div class="container text-justify">
 <div class="col-12">
-<div class="row mt-3">
+<div class="row">
         {% for post in posts %}
         <div class="post bg-white rounded p-4 col-6 ">
                 {% if post.post_image %}
@@ -26,4 +30,7 @@
         {% endfor %}
     </div>
 </div>
+</div>
+</section>
+</main>
 {% endblock %}

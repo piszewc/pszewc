@@ -1,33 +1,55 @@
 {% extends 'main/base.html' %}
 {% block content %}
 {% load staticfiles %}
+<main id="resources">
 
-<section id="landing_page" class="col-12 mt-5 text-center">
-        <h1 class="font-weight-bold">So many books, so little time</h1>
-        <span class="mb-5" >Below you can find books recommendations on programming data science, business and
-            psychology.<br><br></span>
-    <img src="/static/images/book_page_landing.png" class="img-fluid " alt="Responsive image">
-
-</section>
-
-<div class="col-12 mt-5">
-    {% for book in books %}
-    <div class="row">
-        <div class="post bg-white col-3 ">
-            {% if book.book_image %}
-            <div><a class="float-right">
-                    <img class="border rounded " src="{{ book.book_image.url|default_if_none:'#' }}" alt=""
-                        width="170px" height="260px"> </a>
-            </div>
-            {% endif %}
+    <section id="resources_lead" style="padding-top: 5vh">
+        <div class="container text-center text-justify">
+            <h1 class="bd-title mt-2">So many books, so little time</h1>
+            <span class="lead">Below you can find list of resources you can use to learn programming, data science,
+                business and
+                psychology.<br><br></span>
+            <img src="/static/images/book_page_landing.png" class="img-fluid " alt="Responsive image">
         </div>
-        <div class="post bg-white col-9">
-            <h2 class="blog-post-h2 ">
-                {{ book.title }}</h2>
-            <p class="mt-2 text-justify">{{ book.description|linebreaksbr }}</p>
+    </section>
+
+    <section id="Technical Learning">
+
+        <div class="container mt-5">
+            <h2>Technical Learning:</h2>
+            <p><a class="h5" href="https://courses.edx.org/courses/course-v1:MITx+6.00.1x+2T2019/course/">EDX
+                    Programming Using Python:</a>
+                This is the best course on introductory python I have seen and got me going. It is a time-consuming
+                course, but the problems they give are in depth, well-explained, and
+                organized thoroughly. Some of the questions are HARD, but I think that is better than the opposite of
+                everything being too simplified.</p>
         </div>
+    </section>
+
+    <section id="Career">
+        <div class="container mt-5">
+            <h2>Career:</h2>
+            <p><a class="h5"
+                    href="https://www.amazon.com/Effective-Engineer-Engineering-Disproportionate-Meaningful/dp/0996128107">The
+                    Startup Owner's Manual:</a>
+                One of the best books for startups in addition to "Lean Startup". Steve Blank makes a lot of very good
+                points about
+                startup growth and culture, i.e. what makes startups succeed and what makes others fail. He also goes
+                into significant depth on what you and your business can do to minimise the risk of failure.</p>
+        </div>
+        </div>
+    </section>
+
+    <section id="Mindset">
+        <div class="container mt-5 pb-5">
+            <h2>Mindset:</h2>
+            <p><a class="h5"
+                    href="https://www.amazon.com/Effective-Engineer-Engineering-Disproportionate-Meaningful/dp/0996128107">The ONE Thing</a>
+                A great book on time management and productivity. This books is a must read for anyone
+                who feels overwhelmed by too many things to do on their daily schedule. </p>
+        </div>
+    </section>
+
     </div>
-    {% endfor %}
-</div>
-
+</main>
 {% endblock %}

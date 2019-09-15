@@ -16,23 +16,23 @@ html {
   }
   
 .text-navblue:hover:not(.btn), .text-navblue:focus:not(.btn) {
-  color: #007BFF !important;
+  color: #2D8FE2 !important;
   text-decoration: none !important;
   
   }
 
 .text-grey {
-    color: #4e627e !important;
+    color: #032147 !important;
     text-decoration: none !important;
   }
   
 .text-grey:hover, .text-grey:focus {
-    color: #007BFF !important;
+    color: #2D8FE2 !important;
     text-decoration: none !important;
   }
 
 .post {
-  color: #4e627e !important;
+  color: #032147 !important;
   margin-bottom: 2.5em;
 }
 
@@ -96,13 +96,13 @@ main {
 
 
 .nav-top > a:hover:not(.img_remove_border):not(.btn)  {
-  border-bottom: 3px solid #007BFF !important;
+  border-bottom: 3px solid #2D8FE2 !important;
   padding-bottom: 27px !important;
 
 }
 
 .nav-top > a.active:not(.img_remove_border):not(.btn) {
-  border-bottom: 3px solid #007BFF !important; 
+  border-bottom: 3px solid #2D8FE2 !important; 
   padding-bottom: 27px !important;
 } 
 
@@ -115,7 +115,12 @@ main {
 
 }
 
+.top-block-white-bg {
+  height: 50vh;
+  padding: 5vh;
+  font-size: 1.05em !important;
 
+}
 
 .bd-title {
   margin-top: 1rem;
