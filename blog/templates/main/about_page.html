@@ -5,49 +5,57 @@
 <!-- About Section -->
 <main id="about_me">
 
-<section id="contact_block" class="top-block">
+    <section id="contact_block" class="top-block">
         <div class="container text-center text-justify">
-            <h1 class="bd-title mt-2 text-white">Let’s talk</h1>
-            <p>
-                    I'm a certified tableau developer and data passionate. Tell me how I help you.
-            </p>
-           
-        </div>
+            <h1 class="bd-title mt-2 text-white">About</h1>
+
+            <div class="row">
+                <div class="col-2">
+                    <img src="{% static 'images/photo_200px.png' %}" class="rounded-circle" alt=""></a>
+                </div>
+                <div class="col-10 text-left">
+                    <div class="ml-5 lead">
+                        <p>
+                            Hi, I'm Piotr Szewc a MI & Technology Analyst at HAYS,
+                        </p>
+                        <p>My background is in computer science but I always loved to discover stories behind the data.
+                        </p>
+                        <p>
+                            For the past few years, I'm working as a Data Analyst. I'm passioned about all tools and
+                            apps that can help us understand data better and provide value to the business.
+                        </p>
+                        <p>
+                            At my work, I'm mainly using Tableau, PowerBI, Python, Machine Learning, Excel. I would like
+                            to share tips and tricks with you, help you with building knowledge and accelerate learning.
+                        </p>
+                        <p><em>
+                                It always takes longer than you expect, even when you take into account Hofstadter's
+                                Law.
+                            </em>
+
+                        </p>
+                    </div>
+                </div>
+            </div>
     </section>
 
-<section class="cointainer mt-5">
 
-    <div class="mb-4 text-center">
-        <h2 class="bd-title">About Me</h2>
-    </div>
+    <section id="contact_form" class="flex-shrink-0 mt-5">
+        <div class="content container">
+            <div class="row">
+                <div class="">
+                    <h2>About this blog</h2>
+                    <p>I will be posting ideas that I find interesting, contributing to discussion of science/popular
+                        writing, linking to articles that inspire me, and sharing advice with up-and-coming data
+                        scientists.</p>
 
-    <div class="row justify-content-md-center">
-        <div class="col-4">
-            <img src="{% static 'images/my_face.jpg' %}" class="rounded border border-secondary"
-                width="100%" alt=""></a></div>
-        <div class="col-8 justify-content-md-right">
-
-            <div class="">
-                
-                <p>Hello, my name is Piotr Szewc</p>
-                <p>My main speciality and passion are in data, finding what is hidden. I could describe it as “Data
-                    Analytics” what means: “Data Science, Data Mining, Text Mining, Machine Learning, Statistical
-                    Learning,
-                    Statistics, Analytics Modeling, Business Analytics, Knowledge Discovery, Soft Computing, Natural
-                    Language Processing, Data Aggregation, Econometrics, Visualization & related Programming:
-                    Descriptive -,
-                    Predictive -, & Prescriptive Analytic” as short anything that need to derive something out of your
-                    data,
-                    any tool, algorithm, technique, method or programing language to achieve that.
-                </p>
-                <p>
-                    Aside from working as Analyst, I also like to enjoy hiking, playing basketball, gym, cooking for my
-                    colleagues and friends, and different types of books
-                </p>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+        </div>
+        </div>
+
+    </section>
 </main>
 
 {% endblock %}
