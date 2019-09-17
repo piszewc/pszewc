@@ -20,6 +20,9 @@ def post_detail(request, pk, slug):
 def about_page(request):
     return render(request, 'main/about_page.html', {'nbar': 'about_page'})
 
+def landing_page(request):
+    return render(request, 'main/landing_page.html', {'nbar': 'landing_page'})
+
 def model_implementation_page(request):
     return render(request, 'other/machine_learning_model.html', {'nbar': 'model_implementation_page'})
 
