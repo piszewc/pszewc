@@ -68,6 +68,7 @@ h1, h2, h3, h4 {
 .no-padding {
   padding-left: 0;
   padding-right: 0;
+
 }
 
 .blog-text h3 {
@@ -129,3 +130,10 @@ main {
   font-size: 3rem;
   
 }
+
+.landing-page-main {
+  background: #4A58DF;
+  font-size: 1.05em !important;
+  color:#032147;
+}
+
