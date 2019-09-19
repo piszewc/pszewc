@@ -137,3 +137,20 @@ main {
   color:#032147;
 }
 
+.landing-page-main-sub {
+  background: #032147;
+  font-size: 1.05em !important;
+  color:#032147;
+}
+
+.landing-page-images-pc {
+  height: 250px;
+  width: auto;
+  float: right;
+
+}
+
+.landing-page-main-last-section {
+  font-size: 1.05em !important;
+  color:#032147;
+}
