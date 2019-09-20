@@ -154,3 +154,10 @@ main {
   font-size: 1.05em !important;
   color:#032147;
 }
+
+.landing-page-main-image {
+  height: 66vh;
+  width: auto;
+  float: right;
+
+}
