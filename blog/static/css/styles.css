@@ -156,8 +156,8 @@ main {
 }
 
 .landing-page-main-image {
-  height: 66vh;
-  width: auto;
+  height: auto;
+  width:  75vh;
   float: right;
 
 }

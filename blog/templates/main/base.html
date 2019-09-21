@@ -29,12 +29,12 @@
       <nav class="my-2 mr-md-auto my-md-0 mr-md-3 nav-top">
         <a class="my-0 mr-md-auto font-weight-normal pr-3 img_remove_border" href="{% url 'landing_page' %}">
           <img src="{% static 'images/logo.svg' %}" height="50" alt=""></a>
-        <a class="nav-item p-3 text-navblue" href="{% url 'post_list' %}">BLOG</a>
-        <a class="nav-item p-3 text-navblue" href="{% url 'post_list' %}">DATA SCIENCE</a>
-        <a class="nav-item p-3 text-navblue" href="{% url 'post_list' %}">DATA VISUALIZATION</a>
-        <a class="nav-item p-3 text-navblue" href="{% url 'book_list' %}">RESOURCES</a>
-        <a class="nav-item p-3 text-navblue" href="{% url 'about_page' %}">ABOUT</a>
-        <a class="nav-item ml-3 rounded p-3 text-navblue btn btn-outline-primary btn-sm"
+        <a class="nav-item p-3 text-navblue {% if nbar == 'post_list' %}active{% endif %}" href="{% url 'post_list' %}">BLOG</a>
+        <a class="nav-item p-3 text-navblue {% if nbar == 'post_list_ds' %}active{% endif %}" href="{% url 'post_list' %}">DATA SCIENCE</a>
+        <a class="nav-item p-3 text-navblue {% if nbar == 'post_list_dv' %}active{% endif %}" href="{% url 'post_list' %}">DATA VISUALIZATION</a>
+        <a class="nav-item p-3 text-navblue {% if nbar == 'book_list' %}active{% endif %}" href="{% url 'book_list' %}">RESOURCES</a>
+        <a class="nav-item p-3 text-navblue  {% if nbar == 'about_page' %}active{% endif %}" href="{% url 'about_page' %}">ABOUT</a>
+        <a class="nav-item ml-3 rounded p-3 text-navblue btn btn-outline-primary btn-sm {% if nbar == 'contact_page' %}active{% endif %}"
           href="{% url 'contact_page' %}" style="font-size: 1.05em;">LET’S TALK</a>
       </nav>
     </div>

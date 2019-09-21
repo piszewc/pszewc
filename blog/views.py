@@ -11,7 +11,7 @@ from django.conf import settings
 
 def post_list(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
-    return render(request, 'blog/post_list.html', {'posts': posts})
+    return render(request, 'blog/post_list.html', {'posts': posts, 'nbar': 'post_list'})
 
 def post_detail(request, pk, slug):
     post = get_object_or_404(Post, pk=pk, slug=slug)
@@ -28,7 +28,7 @@ def model_implementation_page(request):
 
 def book_list(request):
     books = Book.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
-    return render(request, 'books/book_list.html', {'books': books})
+    return render(request, 'books/book_list.html', {'books': books , 'nbar': 'book_list'})
 
 
 def contact_page(request):
@@ -82,7 +82,7 @@ from django.http import JsonResponse
 from sklearn.externals import joblib
 
 CURRENT_DIR = os.path.dirname(__file__)
-model_file = os.path.join(CURRENT_DIR, 'C:/Users/CAR/Documents/GitHub/pszewc/upload/media/models/saved_model.pkl')
+model_file = os.path.join(CURRENT_DIR, 'C:/Users/piotr/Documents/GitHub/VirtualBox/pszewc/upload/media/models/saved_model.pkl')
 
 model = joblib.load(model_file)
 # Create your views here.
