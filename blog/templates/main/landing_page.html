@@ -32,15 +32,14 @@
         </div>
     </section>
 
-    <section class="py-5 py-md-5 pb-5">
+    <section class="py-5 py-md-5 pb-5 mb-5">
         <div class="container">
-            <h2 class="text-center">Enabling Digital Transformation with Automation, Analytics & AI</h2>
+            <h2 class="text-center"><strong>Enabling Digital Transformation with Automation, Analytics & AI</strong></h2>
 
             <p class="lead text-center">As a Machine Learning Consultant, I can support you with end-to-end Machine
                 Learning, Data Science, AI & software development.
-                <br>
-                <br>
-                <div class="row">
+
+                <div class="row mt-5">
                     <div class="col-12 col-md-4">
 
                         <div class="icon text-primary mb-3">
@@ -85,62 +84,143 @@
     </section>
     <section class="pt-5 pb-5 pt-md-11 landing-page-main-sub">
         <div class="container ">
-            <div class="row align-items-center">
+            <div class="text-center mt-3">
+                <h2 class="text-white ">
+                    <strong>Here's I'm doing it</strong>
+                </h2>
+            </div>
+            <div class="row align-items-center mt-5">
+
                 <div class="col-12 col-md-5 col-lg-6 order-md-2">
-                    <span class="text-white">
-                        1. Frame the problem
+                    <p class="text-white lead">
+                        2. Frame the problem
 
                         This first step is where the objective is defined. Géron refers to objectives in business terms,
                         but this isn't strictly necessary. However, an understanding of how the machine learning
                         system's solution will ultimately be used is important.
-                        <br>                        <br>
 
+
+                    </p>
+
+                </div>
+                <div class="col-6 col-md-7 col-lg-6 order-md-1 ">
+                    <p class="text-white lead">
                         2. Get the data
 
                         This step is data-centric: determine how much data is needed, what type of data is needed, where
                         to get the data, assess legal obligations surrounding data acquisition...
+                    </p>
+                </div>
+            </div>
+            <div class="row align-items-center mt-5">
 
-                        <br>
-                        <br>
+                <div class="col-12 col-md-5 col-lg-6 order-md-2">
+                    <p class="text-white lead">
+                        2. Frame the problem
 
-                        3. Explore the data
+                        This first step is where the objective is defined. Géron refers to objectives in business terms,
+                        but this isn't strictly necessary. However, an understanding of how the machine learning
+                        system's solution will ultimately be used is important.
 
-                        This step in the checklist is akin to what is often referred to as Exploratory Data Analysis
-                        (EDA). The goal is to try and gain insights from the data prior to modeling. Recall that in the
-                        first step assumptions about the data were to be identified and explored; this is a good time to
-                        more deeply investigate these assumptions.
-                        <br>
-                        <br>
 
-                        4. Prepare the data
-
-                        Time to apply data transformations you identified as being worthy in the previous step.
-
-                    </span>
+                    </p>
 
                 </div>
                 <div class="col-6 col-md-7 col-lg-6 order-md-1 ">
+                    <p class="text-white lead">
+                        2. Get the data
 
-                    <h2 class="text-center text-white">
-                        Here's how we are doing it
-                    </h2>
-
+                        This step is data-centric: determine how much data is needed, what type of data is needed, where
+                        to get the data, assess legal obligations surrounding data acquisition...
+                    </p>
                 </div>
             </div>
+            <div class="row align-items-center mt-5">
+
+                    <div class="col-12 col-md-5 col-lg-6 order-md-2">
+                        <p class="text-white lead">
+                            2. Frame the problem
+    
+                            This first step is where the objective is defined. Géron refers to objectives in business terms,
+                            but this isn't strictly necessary. However, an understanding of how the machine learning
+                            system's solution will ultimately be used is important.
+    
+    
+                        </p>
+    
+                    </div>
+                    <div class="col-6 col-md-7 col-lg-6 order-md-1 ">
+                        <p class="text-white lead">
+                            2. Get the data
+    
+                            This step is data-centric: determine how much data is needed, what type of data is needed, where
+                            to get the data, assess legal obligations surrounding data acquisition...
+                        </p>
+                    </div>
+                </div>
         </div>
     </section>
-    <section class="pt-5 pb-5 pt-md-11 landing-page-main-last-section">
-        <div class="container pb-5">
-
-            <h1 class="bd-title text-center ">
-                Welcome to Piotr Szewc
-            </h1>
-            </br>
-            <p class="lead text-center mb-6 mb-lg-8">
-                Build a beautiful, modern website with flexible Bootstrap components built from scratch.
-            </p>
-
-        </div>
-    </section>
+    <section id="contact_form" class="flex-shrink-0 mt-5">
+            <div class="content container">
+                <div class="row align-items-center">
+                    <div class="col-6">
+                        <!-- contact form -->
+                        <div class="wow animated fadeInRight" data-wow-delay=".2s">
+                            <h1 class="display-4">LET'S TALK</h1>
+    
+                            <p>
+                                    I would love to answer your questions. Tell me what you need!
+                            </p>
+    
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="col-11">
+                            <form class="shake" role="form" method="post" id="contactForm" action="{% url 'contact_page' %}"
+                                name="contact-form" data-toggle="validator">
+                                {% csrf_token %}
+    
+                                <!-- Name -->
+                                <div class="form-group label-floating">
+                                    <label class="control-label" for="name">Name</label>
+                                    <input class="form-control" id="name" type="text" name="name" required
+                                        data-error="Please enter your name">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                                <!-- email -->
+                                <div class="form-group label-floating">
+                                    <label class="control-label" for="email">Email</label>
+                                    <input class="form-control" id="email" type="email" name="email" required
+                                        data-error="Please enter your Email">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                                <!-- Subject -->
+                                <div class="form-group label-floating">
+                                    <label class="control-label">Subject</label>
+                                    <input class="form-control" id="msg_subject" type="text" name="subject" required
+                                        data-error="Please enter your message subject">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                                <!-- Message -->
+                                <div class="form-group label-floating">
+                                    <label for="message" class="control-label">Message</label>
+                                    <textarea class="form-control" rows="3" id="message" name="message" required
+                                        data-error="Write your message"></textarea>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                                <!-- Form Submit -->
+                                <div class="form-submit mt-4 mb-5">
+                                    <button class="btn btn-primary" type="submit" id="form-submit"><i
+                                            class="material-icons mdi mdi-message-outline"></i>
+                                        <span>Send Message</span></button>
+                                    <div id="msgSubmit" hidden>We will contact you shortly</div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 </main>
 {% endblock %}
