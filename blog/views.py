@@ -21,6 +21,18 @@ def about_page(request):
     return render(request, 'main/about_page.html', {'nbar': 'about_page'})
 
 def landing_page(request):
+    if request.method == 'POST':
+        message = request.POST['message']
+        name = request.POST['name']
+        subject = request.POST['subject']
+        email = request.POST['email']
+        context = {'name': name, 'subject': subject,
+                    'email': email,  'message': message}
+        template = render_to_string(
+            'main/email_template.html', context)
+        send_mail('Landing Page', template, settings.EMAIL_HOST_USER,
+                    ['pszewc@zoho.eu'], fail_silently=False)
+
     return render(request, 'main/landing_page.html', {'nbar': 'landing_page'})
 
 def model_implementation_page(request):
