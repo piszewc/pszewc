@@ -23,38 +23,39 @@
   <!-- Header 2 -->
   <header class="container-fluid d-flex justify-content-center border-bottom bg-white ">
 
-  <nav class="navbar navbar-expand-lg navbar-light ">
-    <a class="my-0 mr-md-auto font-weight-normal pr-3 img_remove_border" href="{% url 'landing_page' %}">
-      <img src="{% static 'images/logo.svg' %}" height="50" alt=""></a>
+    <nav class="navbar navbar-expand-lg navbar-light ">
+      <a class="my-0 mr-md-auto font-weight-normal pr-3 img_remove_border" href="{% url 'landing_page' %}">
+        <img src="{% static 'images/logo.svg' %}" height="50" alt=""></a>
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <div class="collapse navbar-collapse " id="navbarNavDropdown">
-      <ul class="navbar-nav align-items-center">
-        <li class="nav-item {% if nbar == 'post_list' %}active{% endif %} nav-top">
-         <a class="nav-item p-3 text-navblue" href="{% url 'post_list' %}">BLOG</a>
-        </li>
-        <li class="nav-item  {% if nbar == 'post_list_ds' %}active{% endif %} nav-top">
-          <a class="nav-item p-3 text-navblue" href="{% url 'post_list' %}">DATA SCIENCE</a>
-         </li>
-         <li class="nav-item {% if nbar == 'post_list_dv' %}active{% endif %} nav-top">
-          <a class="nav-item p-3 text-navblue " href="{% url 'post_list' %}">DATA VISUALIZATION</a>
-        </li>
-         <li class="nav-item {% if nbar == 'book_list' %}active{% endif %} nav-top">
-          <a class="nav-item p-3 text-navblue " href="{% url 'book_list' %}">RESOURCES</a>
-
-         </li>  <li class="nav-item {% if nbar == 'about_page' %}active{% endif %} nav-top">
-          <a class="nav-item p-3 text-navblue  " href="{% url 'about_page' %}">ABOUT</a>
-        </li>
-      </li>  <li class="nav-item {% if nbar == 'contact_page' %}active{% endif %} nav-top">
-        <a class="nav-item ml-3 ml-0-sm rounded p-3 text-navblue btn btn-outline-primary "
-          href="{% url 'contact_page' %}" style="font-size: 1.05em;">LET’S TALK</a>
-      </li>
-      </ul>
-  </nav>
-  </div>
+      <div class="collapse navbar-collapse nav-top" id="navbarNavDropdown">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item">
+            <a class="nav-item p-3 text-navblue {% if nbar == 'post_list' %} active {% endif %}" href="{% url 'post_list' %}">BLOG</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-item p-3 text-navblue {% if nbar == 'post_list_ds' %}active{% endif %}" href="{% url 'post_list' %}">DATA SCIENCE</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-item p-3 text-navblue {% if nbar == 'post_list_dv' %}active{% endif %}" href="{% url 'post_list' %}">DATA VISUALIZATION</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-item p-3 text-navblue {% if nbar == 'book_list' %}active{% endif %}" href="{% url 'book_list' %}">RESOURCES</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-item p-3 text-navblue {% if nbar == 'about_page' %}active{% endif %}" href="{% url 'about_page' %}">ABOUT</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-item ml-lg-3 ml-sm-0 rounded p-3 text-navblue btn btn-outline-primary {% if nbar == 'contact_page' %}active{% endif %}"
+              href="{% url 'contact_page' %}" style="font-size: 1.05em;">LET’S TALK</a>
+          </li>
+        </ul>
+    </nav>
+    </div>
   </header>
 
 

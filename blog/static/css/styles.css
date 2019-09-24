@@ -96,13 +96,13 @@ main {
 
 @media screen and (min-width: 800px) {
 
-  .nav-top > a:hover:not(.img_remove_border):not(.btn)  {
+  .nav-top > ul > li >a:hover:not(.img_remove_border):not(.btn)  {
     border-bottom: 3px solid #2D8FE2 !important;
     padding-bottom: 26px !important;
 
   }
 
-  .nav-top > a.active:not(.img_remove_border):not(.btn) {
+  .nav-top > ul > li > a.active:not(.img_remove_border):not(.btn) {
     border-bottom: 3px solid #2D8FE2 !important; 
     padding-bottom: 26px !important;
   } 
