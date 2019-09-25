@@ -111,7 +111,7 @@ main {
 
 .top-block {
   background: #032147;
-  height: 50vh;
+  min-height: 50vh;
   padding: 5vh;
   font-size: 1.05em !important;
   color:#9ea9b8;
