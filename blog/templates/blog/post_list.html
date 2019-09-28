@@ -8,7 +8,7 @@
 <div class="col-12">
 <div class="row">
         {% for post in posts %}
-        <div class="post bg-white rounded p-4 col-6 ">
+        <div class="post bg-white rounded p-4 col-12 col-md-6 col-lg-6">
                 {% if post.post_image %}
                 <div><a href="{% url 'post_detail' slug=post.slug pk=post.pk %}">
                     <img class="border border-dark" src="{{ post.post_image.url|default_if_none:'#' }}"
