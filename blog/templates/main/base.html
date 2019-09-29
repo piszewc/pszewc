@@ -15,6 +15,16 @@
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
   <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136760062-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-136760062-2');
+  </script>
+
 
   <title>Piotr Szewc - Following the white rabbit.</title>
 </head>
@@ -35,19 +45,24 @@
       <div class="collapse navbar-collapse nav-top" id="navbarNavDropdown">
         <ul class="navbar-nav align-items-center">
           <li class="nav-item">
-            <a class="nav-item p-3 text-navblue {% if nbar == 'post_list' %} active {% endif %}" href="{% url 'post_list' %}">BLOG</a>
+            <a class="nav-item p-3 text-navblue {% if nbar == 'post_list' %} active {% endif %}"
+              href="{% url 'post_list' %}">BLOG</a>
           </li>
           <li class="nav-item">
-            <a class="nav-item p-3 text-navblue {% if nbar == 'post_list_ds' %}active{% endif %}" href="{% url 'post_list' %}">DATA SCIENCE</a>
+            <a class="nav-item p-3 text-navblue {% if nbar == 'post_list_ds' %}active{% endif %}"
+              href="{% url 'post_list' %}">DATA SCIENCE</a>
           </li>
           <li class="nav-item">
-            <a class="nav-item p-3 text-navblue {% if nbar == 'post_list_dv' %}active{% endif %}" href="{% url 'post_list' %}">DATA VISUALIZATION</a>
+            <a class="nav-item p-3 text-navblue {% if nbar == 'post_list_dv' %}active{% endif %}"
+              href="{% url 'post_list' %}">DATA VISUALIZATION</a>
           </li>
           <li class="nav-item">
-            <a class="nav-item p-3 text-navblue {% if nbar == 'book_list' %}active{% endif %}" href="{% url 'book_list' %}">RESOURCES</a>
+            <a class="nav-item p-3 text-navblue {% if nbar == 'book_list' %}active{% endif %}"
+              href="{% url 'book_list' %}">RESOURCES</a>
           </li>
           <li class="nav-item">
-            <a class="nav-item p-3 text-navblue {% if nbar == 'about_page' %}active{% endif %}" href="{% url 'about_page' %}">ABOUT</a>
+            <a class="nav-item p-3 text-navblue {% if nbar == 'about_page' %}active{% endif %}"
+              href="{% url 'about_page' %}">ABOUT</a>
           </li>
           <li class="nav-item ">
             <a class="nav-item ml-lg-3 ml-sm-0 rounded p-3 text-navblue btn btn-outline-primary {% if nbar == 'contact_page' %}active{% endif %}"
