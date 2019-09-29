@@ -95,6 +95,7 @@ from sklearn.externals import joblib
 
 CURRENT_DIR = os.path.dirname(__file__)
 model_file = os.path.join(CURRENT_DIR, 'C:/Users/piotr/Documents/GitHub/VirtualBox/pszewc/upload/media/models/saved_model.pkl')
+#model_file = os.path.join(CURRENT_DIR, '/home/piszewc/pszewc/upload/media/models/saved_model.pkl')
 
 model = joblib.load(model_file)
 # Create your views here.
