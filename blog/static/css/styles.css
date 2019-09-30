@@ -1,7 +1,7 @@
 
 body {
   color:#354d6c;
-  font-family: 'Roboto', sans-serif !important;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif !important;
 
 
 }
@@ -18,7 +18,6 @@ html {
 .text-navblue:hover:not(.btn), .text-navblue:focus:not(.btn) {
   color: #2D8FE2 !important;
   text-decoration: none !important;
-  
   }
 
 .text-grey {
@@ -39,9 +38,10 @@ html {
 h1, h2, h3, h4 {
   color:#032147 !important;
 }
+
 .navbar-center {
   justify-content: center !important;
-  }
+}
 
 .blog-post-h2 {
   font-size: 1.25em !important;
