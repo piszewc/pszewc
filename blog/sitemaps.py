@@ -19,7 +19,7 @@ class Post_Sitemap(sitemaps.Sitemap):
     priority = 0.7
 
     def items(self):
-        return Article.objects.all()
+        return Post.objects.all()
 
     def location(self, obj):
         return obj.note_full_path
