@@ -19,7 +19,7 @@ urlpatterns = [
     path('blog/post/new', views.post_new, name='post_new'),
     path('blog/post/<slug:slug>-<int:pk>/edit', views.post_edit, name='post_edit'),
 
-    path('resources', views.book_list, name='book_list'),
+    path('resources', views.resources, name='resources'),
     
     path('model_implementation_page', views.model_implementation_page, name='model_implementation_page'),
     path('contact', views.contact_page, name='contact_page'),
