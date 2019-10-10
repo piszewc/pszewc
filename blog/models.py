@@ -38,10 +38,11 @@ class Post(models.Model):
   def __str__(self):
     return self.title
 
-def save(self, *args, **kwargs):
-  if not self.id:
-    self.slug = slugify(self.title)
-  super(Post, self).save(*args, **kwargs)
+  def save(self, *args, **kwargs):
+    if not self.id:
+      self.slug = slugify(self.title)
+    super(Post, self).save(*args, **kwargs)
+
 
 class Author(models.Model):
   """Model class for authors"""
@@ -66,3 +67,4 @@ class Book(models.Model):
   
   def __str__(self):
     return self.title
+ 

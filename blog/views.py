@@ -39,8 +39,8 @@ def model_implementation_page(request):
     return render(request, 'other/machine_learning_model.html', {'nbar': 'model_implementation_page'})
 
 def book_list(request):
-    books = Book.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
-    return render(request, 'books/book_list.html', {'books': books , 'nbar': 'book_list'})
+    resources = Book.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    return render(request, 'books/book_list.html', {'resources': resources , 'nbar': 'book_list'})
 
 
 def contact_page(request):
