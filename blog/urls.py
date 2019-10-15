@@ -6,6 +6,9 @@ from django.conf import settings
 from django.contrib.sitemaps.views import sitemap
 from .sitemaps import StaticViewSitemap, Post_Sitemap
 
+from django.conf.urls import url
+from django.http import HttpResponse
+
 sitemaps = {
     'post': Post_Sitemap(),
 
@@ -27,6 +30,7 @@ urlpatterns = [
     path('', views.landing_page, name='landing_page'),
 
     path('api/predict', views.api_sentiment_pred, name='api_sentiment_pred'), 
-    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap')
+    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
+    url(r'^robots.txt', lambda x: HttpResponse("User-Agent: *\nDisallow:", content_type="text/plain"), name="robots_file")
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
