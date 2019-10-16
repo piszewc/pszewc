@@ -6,7 +6,7 @@ from .models import Post
 
 class StaticViewSitemap(sitemaps.Sitemap):
     priority = 0.5
-    changefreq = 'monthly'
+    changefreq = 'weekly'
 
     def items(self):
         return ['landing_page','post_list' ,'resources', 'about_page', 'contact_page']
@@ -15,7 +15,7 @@ class StaticViewSitemap(sitemaps.Sitemap):
         return reverse(item)
 
 class Post_Sitemap(sitemaps.Sitemap):
-    changefreq = "weekly"
+    changefreq = "daily"
     priority = 0.7
 
     def items(self):
