@@ -2,12 +2,15 @@ from django import forms
 
 from .models import Post, Categories, Book, Author
 from .models import Categories
+from tinymce.widgets import TinyMCE
 
 class PostForm(forms.ModelForm):
+    
+    text = forms.CharField(widget=TinyMCE(attrs={'cols': 80, 'rows': 30}))
 
     class Meta:
         model = Post
-        fields = ('title', 'text', "categories", "excerpt", "post_image")
+        fields = ('title', "categories", "excerpt", "post_image")
 
 class PostCategories(forms.ModelForm):
 
