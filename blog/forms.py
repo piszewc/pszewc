@@ -2,15 +2,36 @@ from django import forms
 
 from .models import Post, Categories, Book, Author
 from .models import Categories
-from tinymce.widgets import TinyMCE
+
+from ckeditor.widgets import CKEditorWidget
 
 class PostForm(forms.ModelForm):
     
-    text = forms.CharField(widget=TinyMCE(attrs={'cols': 80, 'rows': 30}))
+    text = forms.CharField(widget=CKEditorWidget())
+    
+    title = forms.CharField(widget=forms.TextInput(
+        attrs={
+            'class':'form-control',
+
+        }
+    ))
+
+    excerpt = forms.CharField(widget=forms.Textarea(
+        attrs={
+            'class':'form-control',
+            "rows":"2",
+        }
+    ))
+
+    # categories = forms.MultipleChoiceField(
+    #     widget=forms.CheckboxSelectMultiple(
+
+    #     ))
+
 
     class Meta:
         model = Post
-        fields = ('title', "categories", "excerpt", "post_image")
+        fields = ('title', "excerpt","text","categories", "post_image")
 
 class PostCategories(forms.ModelForm):
 

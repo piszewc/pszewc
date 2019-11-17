@@ -2,7 +2,7 @@ from django.conf import settings
 from django.db import models
 from django.utils import timezone
 from django.template.defaultfilters import slugify
-from tinymce import models as tinymce_models
+from ckeditor.fields import RichTextField
 
 
 class Categories(models.Model):
@@ -24,7 +24,7 @@ class Post(models.Model):
   slug = models.SlugField(max_length=140 , blank=True, null=True)
 
   excerpt = models.CharField(max_length=300, blank=True, null=True)
-  text = tinymce_models.HTMLField()
+  text = RichTextField()
   
   post_image = models.ImageField(
     upload_to='post_image/', blank=True, null=True)

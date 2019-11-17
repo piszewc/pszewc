@@ -6,10 +6,13 @@
         <div class="d-flex justify-content-center text-justify">
             <div class="col-10 col-md-10 col-lg-10 col-xl-6">
 
-                <h2>New post</h2>
-                <form method="POST" class="post-form">{% csrf_token %}
+                <h2>Edit Post</h2>
+                <form method="POST" class="post-form">
+                    {% csrf_token %}
+                    {{ form.media }}
                     {{ form.as_p }}
-                    <button type="submit" class="save btn btn-default">Save</button>
+                        
+                    <button type="submit" class="save btn btn-outline-primary">Save</button>
                 </form>
             </div>
     </section>
