@@ -7,6 +7,14 @@ from ckeditor.widgets import CKEditorWidget
 
 class PostForm(forms.ModelForm):
     
+    FAVORITE_COLORS_CHOICES = [
+    ('blue', 'Blue'),
+    ('green', 'Green'),
+    ('black', 'Black'),
+]
+
+
+
     text = forms.CharField(widget=CKEditorWidget())
     
     title = forms.CharField(widget=forms.TextInput(
@@ -22,11 +30,6 @@ class PostForm(forms.ModelForm):
             "rows":"2",
         }
     ))
-
-    # categories = forms.MultipleChoiceField(
-    #     widget=forms.CheckboxSelectMultiple(
-
-    #     ))
 
 
     class Meta:
