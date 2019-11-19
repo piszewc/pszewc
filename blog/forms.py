@@ -31,6 +31,10 @@ class PostForm(forms.ModelForm):
         }
     ))
 
+    categories = forms.ModelMultipleChoiceField(queryset=Categories.objects.all(), widget=forms.SelectMultiple(attrs={
+            'class':'form-control',
+        }))
+
 
     class Meta:
         model = Post
