@@ -67,6 +67,7 @@ def post_new(request):
             post.author = request.user
             post.published_date = timezone.now()
             post.save()
+            form.save_m2m()
             return redirect('post_detail', pk=post.pk, slug=post.slug)
     else:
         form = PostForm()
@@ -81,6 +82,7 @@ def post_edit(request, pk, slug):
             post.author = request.user
             post.published_date = timezone.now()
             post.save()
+            form.save_m2m()
             return redirect('post_detail', pk=post.pk, slug=post.slug)
     else:
         form = PostForm(instance=post)
