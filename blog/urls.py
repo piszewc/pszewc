@@ -11,7 +11,6 @@ from django.http import HttpResponse
 
 sitemaps = {
     'post': Post_Sitemap(),
-
     'static': StaticViewSitemap,
 }
 
@@ -32,6 +31,7 @@ urlpatterns = [
     path('api/predict', views.api_sentiment_pred, name='api_sentiment_pred'), 
     path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
     url(r'^robots.txt', lambda x: HttpResponse("User-Agent: *\nDisallow:", content_type="text/plain"), name="robots_file"),
+    url(r'^markdownx/', include('markdownx.urls')),
 
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

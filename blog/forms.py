@@ -2,8 +2,7 @@ from django import forms
 
 from .models import Post, Categories, Book, Author
 from .models import Categories
-
-from ckeditor.widgets import CKEditorWidget
+from markdownx.models import MarkdownxFormField
 
 class PostForm(forms.ModelForm):
     
@@ -15,7 +14,7 @@ class PostForm(forms.ModelForm):
 
 
 
-    text = forms.CharField(widget=CKEditorWidget())
+    text = MarkdownxFormField()
     
     title = forms.CharField(widget=forms.TextInput(
         attrs={
