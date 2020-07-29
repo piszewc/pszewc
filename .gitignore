@@ -8,3 +8,5 @@ settings.py
 # Backup files # 
 *.bak 
 db.sqlite3
+*.pyc
+*.sqlite3
